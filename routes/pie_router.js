@@ -2,12 +2,25 @@ var express = require("express");
 var router = express.Router();
 // var pie = require("../models/pie.js");
 
-module.exports = function(router) {
+module.exports = function(router, Pie) {
     // Landing Page
     router.get("/", function(req, res) {
-
         res.render("index");
     });
+
+    router.get("/api/pies", function(req, res) {
+        Pie.findAll({
+        }).then(function (result) {
+            res.json(result);
+        });
+    });
+
+    router.post("/api/pies", function(req,res) {
+        Pie.create(req.body).then(function (result) {
+            res.json(result);
+        });
+    });
+
 };
 
 // router.get("/", function(req, res) {

@@ -24,17 +24,19 @@
             </div>
         </div>
         <div class="col-md-6">
-            {{!-- <div id="chalkboard">
+            <div id="chalkboard">
                 <h1>Today's Specials</h1>
                 <img src="assets/img/laurel-crossed.svg">
+                <div class="pie-container"></div>
 
-                {{#each pies}} {{#if stock}} {{> pies/pie-stock stock=false}} {{/if}} {{/each}}
+                {{!-- {{#each Pies}} {{#if stock}} {{> pies/pie-stock stock=false}} {{/if}} {{/each}} --}}
 
                 <h1>Sold Out</h1>
                 <img src="assets/img/laurel-crossed.svg">
+                <div class="completed-pie-container"></div>
 
-                {{#each pies}} {{#unless stock}} {{> pies/pie-stock stock=true}} {{/unless}} {{/each}}
+                {{!-- {{#each Pies}} {{#unless stock}} {{> pies/pie-stock stock=true}} {{/unless}} {{/each}} --}}
             </div>
-        </div> --}}
+        </div>
     </div>
 </div>
