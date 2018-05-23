@@ -27,15 +27,15 @@
             <div id="chalkboard">
                 <h1>Today's Specials</h1>
                 <img src="assets/img/laurel-crossed.svg">
-                <div class="pie-container"></div>
+                {{!-- <div class="pie-container"></div> --}}
 
-                {{!-- {{#each Pies}} {{#if stock}} {{> pies/pie-stock stock=false}} {{/if}} {{/each}} --}}
+                {{#each pies}} {{#if stock}} {{> pies/pie-stock stock=false}} {{/if}} {{/each}}
 
                 <h1>Sold Out</h1>
                 <img src="assets/img/laurel-crossed.svg">
-                <div class="completed-pie-container"></div>
+                {{!-- <div class="completed-pie-container"></div> --}}
 
-                {{!-- {{#each Pies}} {{#unless stock}} {{> pies/pie-stock stock=true}} {{/unless}} {{/each}} --}}
+                {{#each pies}} {{#unless stock}} {{> pies/pie-stock stock=true}} {{/unless}} {{/each}}
             </div>
         </div>
     </div>

@@ -58,45 +58,6 @@ $(document).ready(function () {
         };
     };
 
-    var pieContainer = $(".pie-container");
-    var noPieContainer = $(".completed-pie-container");
-    var pies;
-
-    function getPies() {
-        $.get("/api/pies", function (data) {
-            console.log("Pies", data);
-            pies = data;
-            initializeRows();
-        });
-    };
-
-    function initializeRows() {
-        pieContainer.empty();
-        noPieContainer.empty();
-        var pieToAdd = [];
-        var pieToSubtract = [];
-        for (var i = 0; i < pies.length; i++) {
-            if (!pies[i].stock) {
-                pieToAdd.push(createNewRow(pies[i]));
-            } else {
-                pieToSubtract.push(createNewRow(pies[i]));
-            }
-        }
-        pieContainer.append(pieToAdd);
-        noPieContainer.append(pieToSubtract);
-    }
-
-    function createNewRow(pie) {
-        var newPieItem = $("<div>");
-        var newPieName = $("<h2>");
-        newPieName.text(pie.pie_name);
-        newPieItem.append(newPieName);
-        newPieItem.data("pie", pie);
-        return newPieItem;
-    }
-
-    getPies();
-
     // Event Listeners
     $(".create-form").on("submit", function (event) {
         // Make sure to preventDefault on a submit event.

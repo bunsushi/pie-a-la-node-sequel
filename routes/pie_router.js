@@ -5,7 +5,8 @@ var router = express.Router();
 module.exports = function(router, Pie) {
     // Landing Page
     router.get("/", function(req, res) {
-        res.render("index");
+        Pie.findAll({})
+        .then((data) => res.render("index", {pies: data}))
     });
 
     router.get("/api/pies", function(req, res) {
