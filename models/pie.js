@@ -26,3 +26,34 @@ var pie = {
 };
 
 module.exports = pie;
+
+module.exports = function (sequelize, Sequelize) {
+  var Pie = sequelize.define("Pie", {
+      id: {
+          autoIncrement: true,
+          primaryKey: true,
+          type: Sequelize.INTEGER
+      },
+      task: {
+          type: Sequelize.STRING,
+          notEmpty: true
+      },
+      complete: {
+          type: Sequelize.BOOLEAN,
+          allowNull: false,
+          defaultValue: false
+      },
+      due: {
+          type: Sequelize.DATE,
+          allowNull: false,
+          defaultValue: Sequelize.NOW
+      },
+      completedAt: {
+          type: Sequelize.STRING,
+          allowNull: true,
+      }
+  });
+
+  return Pie
+};
+
