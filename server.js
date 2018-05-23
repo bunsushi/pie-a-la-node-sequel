@@ -3,6 +3,8 @@ var bodyParser = require("body-parser");
 
 var PORT = process.env.PORT || 5000;
 
+var db = require("./models");
+
 var app = express();
 
 app.use(express.static("public"));
@@ -15,9 +17,7 @@ var exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-var routes = require("./controllers/pie_controller.js");
-
-app.use(routes);
+require("./routes/pie_router.js")(app);
 
 app.listen(PORT, function() {
   console.log("Server listening on: http://localhost:" + PORT);

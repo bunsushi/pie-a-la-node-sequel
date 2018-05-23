@@ -1,27 +1,3 @@
-<!-- Modal -->
-{{!--
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Welcome to Pie &agrave la Node!</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <p>You're a certified Pie Genius! Your job is to invent creative pies.</p>
-                <p>Select your ingredients from the menu on the left. Don't forget to give it a descriptive or colorful name!</p>
-                <p>If you need to edit or delete pie, hover over the text on the chalkboard.</p>
-                <p>Ready, set, bake!</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Ready!</button>
-            </div>
-        </div>
-    </div>
-</div> --}}
-
 <div class="container-fluid">
     <div class="row">
         {{!-- Reconfigure this into a navbar --}}
@@ -48,7 +24,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div id="chalkboard">
+            {{!-- <div id="chalkboard">
                 <h1>Today's Specials</h1>
                 <img src="assets/img/laurel-crossed.svg">
 
@@ -59,6 +35,6 @@
 
                 {{#each pies}} {{#unless stock}} {{> pies/pie-stock stock=true}} {{/unless}} {{/each}}
             </div>
-        </div>
+        </div> --}}
     </div>
 </div>
