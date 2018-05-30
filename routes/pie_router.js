@@ -7,7 +7,10 @@ module.exports = function(router, Pie) {
     router.get("/", function(req, res) {
         Pie.findAll({})
         .then(function (data) {
-            res.render("index", {pies: data})
+            var hbsObject = {
+                pies: data
+            };
+            res.render("index", hbsObject)
         });
     });
 

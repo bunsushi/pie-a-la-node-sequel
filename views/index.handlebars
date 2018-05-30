@@ -29,13 +29,13 @@
                 <img src="assets/img/laurel-crossed.svg">
                 {{!-- <div class="pie-container"></div> --}}
 
-                {{#each pies}} {{#if stock}} {{> pies/pie-stock stock=false}} {{/if}} {{/each}}
+                {{#each pies}} {{#if stock}} {{> pies/pie-stock}} {{/if}} {{/each}}
 
                 <h1>Sold Out</h1>
                 <img src="assets/img/laurel-crossed.svg">
                 {{!-- <div class="completed-pie-container"></div> --}}
 
-                {{#each pies}} {{#unless stock}} {{> pies/pie-stock stock=true}} {{/unless}} {{/each}}
+                {{#each pies}} {{#unless stock}} {{> pies/pie-stock}} {{/unless}} {{/each}}
             </div>
         </div>
     </div>
