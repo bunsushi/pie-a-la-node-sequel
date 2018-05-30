@@ -1,13 +1,13 @@
 <h2>{{pie_name}}
-{{!-- 
-    <button class="toggle-stock pie-button" data-id="{{this.id}}" data-newstock="{{stock}}">
+
+    <button class="toggle-stock pie-button" data-id="{{this.id}}" {{#if stock}} data-newstock="false" {{else}} data-newstock="true" {{/if}}>
         {{#if stock}}
-        <i class="fas fa-plus"></i>{{else}}
-        <i class="fas fa-times"></i>{{/if}}
+        <i class="fas fa-times"></i>{{else}}
+        <i class="fas fa-plus"></i>{{/if}}
     </button>
 
     <button class="delete-pie pie-button" data-id="{{this.id}}">
         <i class="far fa-trash-alt"></i>
     </button>
-    </button> --}}
+    </button>
 </h2>
