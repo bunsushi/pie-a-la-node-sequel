@@ -6,7 +6,9 @@ module.exports = function(router, Pie) {
     // Landing Page
     router.get("/", function(req, res) {
         Pie.findAll({})
-        .then((data) => res.render("index", {pies: data}))
+        .then(function (data) {
+            res.render("index", {pies: data})
+        });
     });
 
     router.get("/api/pies", function(req, res) {
